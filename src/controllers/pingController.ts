@@ -5,6 +5,10 @@ import { Controller, Example, Get, Query, Response, Route, Tags } from "tsoa";
 @Route("ping")
 @Tags("Ping")
 export class PingController extends Controller {
+  /**
+   * @param {string} name Your Name
+   * @returns Promise<RegularResponse>
+   */
   @Get("/")
   @Response<RegularResponse>("200", "Success")
   @Example<RegularResponse>({
