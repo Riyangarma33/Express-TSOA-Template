@@ -43,7 +43,7 @@
         #   };
         # };
         web = {
-          command = ["yarn" "dev"];
+          command = ["yarn" "dev:server"];
           manager = "web";
           env = {
             PORT = "$PORT";
@@ -58,11 +58,13 @@
       onCreate = {
         # Example: install JS dependencies from NPM
         # npm-install = "npm install";
+        install-dep = "yarn";
       };
       # Runs when the workspace is (re)started
       onStart = {
         # Example: start a background task to watch and re-build backend code
         # watch-backend = "npm run watch-backend";
+        tsoa-generate = "yarn dev:generate";
       };
     };
   };
