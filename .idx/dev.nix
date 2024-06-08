@@ -18,6 +18,14 @@
   env = {
     PORT = "3000";
   };
+
+  # Docker Service
+  services = {
+    docker = {
+      enable = true;
+    };
+  };
+
   idx = {
     # Search for the extensions you want on https://open-vsx.org/ and use "publisher.id"
     extensions = [
