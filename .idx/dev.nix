@@ -34,6 +34,7 @@
       "esbenp.prettier-vscode"
       "usernamehw.errorlens"
       "cweijan.vscode-office"
+      "ms-azuretools.vscode-docker"
     ];
 
     # Enable previews
