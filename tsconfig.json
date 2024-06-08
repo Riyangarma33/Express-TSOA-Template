@@ -3,7 +3,7 @@
     "target": "ES6",
     "module": "CommonJS",
     "outDir": "./dist",
-    "rootDirs": ["./src", "./dist/swagger"],
+    "rootDirs": ["./src"],
     "strict": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
@@ -11,7 +11,7 @@
     "resolveJsonModule": true,
     "paths": {
       "@routes": ["src/routes.ts"],
-      "@swaggerConfig": ["dist/swagger/swagger.json"],
+      "@swaggerConfig": ["src/swagger/swagger.json"],
       "@schemas/*": ["src/schemas/*"],
       "tsoa": ["node_modules/tsoa/dist"],
       "tsoa/": ["node_modules/tsoa/dist/"]

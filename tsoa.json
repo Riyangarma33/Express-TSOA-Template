@@ -4,14 +4,15 @@
   "controllerPathGlobs": ["src/controllers/**/*.ts"],
   "compilerOptions": {
     "paths": {
-      "@src/*": ["src/*"],
+      "@routes": ["src/routes.ts"],
+      "@swaggerConfig": ["src/swagger/swagger.json"],
       "@schemas/*": ["src/schemas/*"],
       "tsoa": ["node_modules/tsoa/dist"],
       "tsoa/": ["node_modules/tsoa/dist/"]
     }
   },
   "spec": {
-    "outputDirectory": "dist/swagger",
+    "outputDirectory": "src/swagger",
     "specVersion": 3
   },
   "routes": {
