@@ -73,7 +73,7 @@
       onStart = {
         # Example: start a background task to watch and re-build backend code
         # watch-backend = "npm run watch-backend";
-        tsoa-generate = "yarn dev:generate";
+        tsoa-generate = "npm dev:generate";
       };
     };
   };
