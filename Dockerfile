@@ -13,7 +13,7 @@ COPY --from=BUILD /usr/api .
 # Use rsync to remove unnecessary files while copying
 RUN rsync -av \
   --exclude 'src' --exclude 'node_modules' \
-  --exclude 'tsconfig.json' --exclude 'tsoa.json' \
+  --exclude 'tsconfig.json' --exclude 'tsoaConfig.json' \
   --progress /usr/api/ /usr/clean_api
 
 # Run Stage
