@@ -12,9 +12,7 @@
     "paths": {
       "@routes": ["src/routes.ts"],
       "@swaggerConfig": ["src/swagger/swagger.json"],
-      "@schemas/*": ["src/schemas/*"],
-      "tsoa": ["node_modules/tsoa/dist"],
-      "tsoa/": ["node_modules/tsoa/dist/"]
+      "@schemas/*": ["src/schemas/*"]
     },
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
