@@ -7,7 +7,7 @@ import { Controller, Example, Get, Query, Response, Route, Tags } from "tsoa";
 export class PingController extends Controller {
   /**
    * @param {string} name Your Name
-   * @returns Promise<RegularResponse>
+   * @returns {RegularResponse} Pong for Your Name
    */
   @Get("/")
   @Response<RegularResponse>("200", "Success")
