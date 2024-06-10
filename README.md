@@ -33,3 +33,18 @@ To install the production dependencies (in case you want to deploy the API), you
   $ # or
   $ NODE_ENV=production npm install
   ```
+
+## Development
+
+To run the API for development, you can run the `dev` script or use two terminals and run `dev:generate` and `dev:server`.
+
+* yarn
+
+  ```bash
+  $ yarn dev
+  ```
+* npm
+
+  ```bash
+  $ npm run dev
+  ```
