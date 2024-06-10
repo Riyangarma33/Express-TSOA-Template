@@ -2,5 +2,5 @@
   "verbose": true,
   "watch": ["src/controllers", "src/schemas"],
   "ext": "ts",
-  "exec": "yarn tsoa:generate"
+  "exec": "npm tsoa:generate"
 }
