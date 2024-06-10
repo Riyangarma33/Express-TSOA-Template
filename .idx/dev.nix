@@ -52,7 +52,7 @@
         #   };
         # };
         web = {
-          command = ["yarn" "dev:server"];
+          command = ["npm" "run" "dev:server"];
           manager = "web";
           env = {
             PORT = "$PORT";
