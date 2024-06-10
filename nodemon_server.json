@@ -3,7 +3,7 @@
   "watch": [
     "src/routes.ts",
     "scr/server.ts",
-    "dist/swagger.json"
+    "src/swagger/swagger.json"
   ],
   "ext": "ts,json",
   "exec": "ts-node -r tsconfig-paths/register src/server.ts"
