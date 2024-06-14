@@ -67,7 +67,7 @@
       onCreate = {
         # Example: install JS dependencies from NPM
         # npm-install = "npm install";
-        install-dep = "yarn";
+        install-dep = "corepack install";
       };
       # Runs when the workspace is (re)started
       onStart = {
