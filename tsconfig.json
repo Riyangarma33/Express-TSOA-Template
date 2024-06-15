@@ -12,7 +12,8 @@
     "paths": {
       "@routes": ["src/routes.ts"],
       "@swaggerConfig": ["src/swagger/swagger.json"],
-      "@schemas/*": ["src/schemas/*"]
+      "@schemas/*": ["src/schemas/*"],
+      "@constants": ["src/constants.ts"]
     },
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,

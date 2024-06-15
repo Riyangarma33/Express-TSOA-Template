@@ -3,6 +3,7 @@
   "watch": [
     "src/routes.ts",
     "scr/server.ts",
+    "src/constants.ts",
     "src/swagger/swagger.json"
   ],
   "ext": "ts,json",
