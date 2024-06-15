@@ -1,0 +1,10 @@
+{
+  "verbose": true,
+  "watch": [
+    "src/routes.ts",
+    "scr/server.ts",
+    "src/swagger/swagger.json"
+  ],
+  "ext": "ts,json",
+  "exec": "ts-node -r tsconfig-paths/register src/server.ts"
+}

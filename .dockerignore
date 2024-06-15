@@ -1,0 +1,14 @@
+.idx
+.vscode
+node_modules
+dist
+Dockerfile
+docker-compose.yml
+.dockerignore
+.git
+.gitignore
+.eslint*
+.prettier*
+nodemon*.json
+LICENSE
+README.md
