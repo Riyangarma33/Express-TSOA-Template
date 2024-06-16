@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "target": "ES6",
+    "target": "ESNext",
     "module": "CommonJS",
     "outDir": "./dist",
     "rootDirs": ["./src"],
@@ -13,7 +13,8 @@
       "@routes": ["src/routes.ts"],
       "@swaggerConfig": ["src/swagger/swagger.json"],
       "@schemas/*": ["src/schemas/*"],
-      "@constants": ["src/constants.ts"]
+      "@constants": ["src/constants.ts"],
+      "@http-exception": ["src/utils/exception/http-exception.ts"]
     },
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,

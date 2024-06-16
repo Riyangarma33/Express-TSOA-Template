@@ -7,14 +7,23 @@
       "@routes": ["src/routes.ts"],
       "@swaggerConfig": ["src/swagger/swagger.json"],
       "@schemas/*": ["src/schemas/*"],
-      "@constants": ["src/constants.ts"]
+      "@constants": ["src/constants.ts"],
+      "@http-exception": ["src/utils/exception/http-exception.ts"]
     }
   },
   "spec": {
     "outputDirectory": "src/swagger",
-    "specVersion": 3
+    "specVersion": 3,
+    "securityDefinitions": {
+      "ApiKeyAuth": {
+        "type": "apiKey",
+        "in": "header",
+        "name": "x-api-key"
+      }
+    }
   },
   "routes": {
-    "routesDir": "src"
+    "routesDir": "src",
+    "authenticationModule": "src/middlewares/authentication.ts"
   }
 }
