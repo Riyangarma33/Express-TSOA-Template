@@ -1,3 +1,4 @@
+import { HTTPStatusCode } from "@constants";
 import { pingSchema } from "@schemas/pingSchemas";
 import { RegularResponse } from "@schemas/regularSchemas";
 import { Controller, Example, Get, Query, Response, Route, Tags } from "tsoa";
@@ -7,6 +8,7 @@ import { Controller, Example, Get, Query, Response, Route, Tags } from "tsoa";
 export class PingController extends Controller {
   /**
    * @param {string} name Your Name
+   * @example name "John Doe"
    * @returns {RegularResponse} Pong for Your Name
    */
   @Get("/")
@@ -22,7 +24,7 @@ export class PingController extends Controller {
   public async ping(@Query() name?: string): Promise<RegularResponse> {
     const { error } = pingSchema.validate({ name });
     if (error) {
-      this.setStatus(422);
+      this.setStatus(HTTPStatusCode.UnprocessableEntity);
       return {
         error: true,
         message: error.details[0].message,
