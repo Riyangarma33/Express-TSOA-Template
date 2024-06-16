@@ -1,3 +1,5 @@
+import { HTTPStatusCode } from "@constants";
+import { UnauthorizedError } from "@http-exception";
 import { RegisterRoutes } from "@routes";
 import * as swaggerDocument from "@swaggerConfig";
 import express from "express";
@@ -43,8 +45,16 @@ app.use(
       });
     }
 
+    // Unauthorized Error from @Security Decorator
+    if (err instanceof UnauthorizedError) {
+      return res.status(HTTPStatusCode.Unauthorized).json({
+        error: true,
+        message: "Unauthorized",
+      });
+    }
+
     if (err instanceof Error) {
-      return res.status(500).json({
+      return res.status(HTTPStatusCode.InternalServerError).json({
         error: true,
         message: "Internal Server Error",
       });
