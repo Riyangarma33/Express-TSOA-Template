@@ -1,6 +1,13 @@
 {
   "verbose": true,
-  "watch": ["src/controllers", "src/schemas"],
-  "ext": "ts",
+  "watch": [
+    "src/controllers",
+    "src/schemas",
+    "src/middlewares",
+    "src/utils",
+    "tsoaConfig.json",
+    "tsconfig.json"
+  ],
+  "ext": "ts,json",
   "exec": "yarn tsoa:generate"
 }
