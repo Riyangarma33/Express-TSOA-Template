@@ -132,3 +132,4 @@ dist
 # Auto Generated Files
 src/routes.ts
 src/swagger
+db/*.sqlite3
