@@ -8,7 +8,8 @@
       "@swaggerConfig": ["src/swagger/swagger.json"],
       "@schemas/*": ["src/schemas/*"],
       "@constants": ["src/constants.ts"],
-      "@http-exception": ["src/utils/exception/http-exception.ts"]
+      "@http-exception": ["src/utils/exception/http-exception.ts"],
+      "@db/*": ["src/utils/db/*"]
     }
   },
   "spec": {
