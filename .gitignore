@@ -133,3 +133,4 @@ dist
 src/routes.ts
 src/swagger
 db/*.sqlite3
+!db/
