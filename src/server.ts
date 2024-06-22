@@ -1,4 +1,5 @@
 import { HTTPStatusCode } from "@constants";
+import db from "@db/db";
 import { UnauthorizedError } from "@http-exception";
 import { RegisterRoutes } from "@routes";
 import * as swaggerDocument from "@swaggerConfig";
@@ -39,7 +40,7 @@ app.use(
         `Caught Validation Error for ${requestDetails.endpoint}.`,
         err.fields,
       );
-      return res.status(422).json({
+      return res.status(HTTPStatusCode.UnprocessableEntity).json({
         error: true,
         message: `Validation Failed on endpoint ${req.path} with input: ${JSON.stringify(requestDetails)}`,
       });
@@ -64,6 +65,13 @@ app.use(
   },
 );
 
-app.listen(port, () => {
-  console.log(`Server started at http://localhost:${port}`);
-});
+db.raw("SELECT 1")
+  .then(() => {
+    console.log("Database Connected");
+    app.listen(port, () => {
+      console.log(`Server started at http://localhost:${port}`);
+    });
+  })
+  .catch((error) => {
+    console.error(`Database Connection Error: ${error}`);
+  });
