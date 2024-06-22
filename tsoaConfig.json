@@ -9,7 +9,8 @@
       "@schemas/*": ["src/schemas/*"],
       "@constants": ["src/constants.ts"],
       "@http-exception": ["src/utils/exception/http-exception.ts"],
-      "@db/*": ["src/utils/db/*"]
+      "@db/*": ["src/utils/db/*"],
+      "@controllerUtils/*": ["src/utils/controller/*"]
     }
   },
   "spec": {
