@@ -1,4 +1,4 @@
-import { HTTPStatusCode } from "@constants";
+import { envPort, HTTPStatusCode } from "@constants";
 import db from "@db/db";
 import { UnauthorizedError } from "@http-exception";
 import { RegisterRoutes } from "@routes";
@@ -9,7 +9,6 @@ import swaggerUi from "swagger-ui-express";
 import { ValidateError } from "tsoa";
 
 const app = express();
-const envPort: number = parseInt(process.env.PORT || "");
 const port = envPort || 3000;
 
 app.use(morgan("combined"));

@@ -1,3 +1,4 @@
+import { API_KEY } from "@constants";
 import { UnauthorizedError } from "@http-exception";
 import * as express from "express";
 
@@ -9,7 +10,7 @@ export function expressAuthentication(
   console.warn(`req.headers: ${JSON.stringify(req.headers)}`);
   if (securityName === "ApiKeyAuth") {
     return new Promise((resolve, reject) => {
-      if (req.headers["x-api-key"] === "12345") {
+      if (req.headers["x-api-key"] === API_KEY) {
         // Return to the Controller with req.user
         resolve({
           error: false,
