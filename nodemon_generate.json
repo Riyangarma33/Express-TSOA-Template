@@ -6,8 +6,9 @@
     "src/middlewares",
     "src/utils",
     "tsoaConfig.json",
-    "tsconfig.json"
+    "tsconfig.json",
+    ".env"
   ],
-  "ext": "ts,json",
+  "ext": "ts,json,env",
   "exec": "yarn tsoa:generate"
 }
