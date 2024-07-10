@@ -1,3 +1,7 @@
+// Load dotenv
+import dotenv from "dotenv";
+dotenv.config();
+
 export const URLENCODED = "application/x-www-form-urlencoded";
 export enum HTTPStatusCode {
   Ok = 200,
@@ -25,3 +29,7 @@ export enum HTTPStatusCode {
   ServiceUnavailable = 503,
   GatewayTiemout = 504,
 }
+
+// ENV Variables
+export const envPort: number = parseInt(process.env.PORT || "");
+export const API_KEY: string = process.env.API_KEY || "12345";
